@@ -11,7 +11,9 @@ tags: [test, app, apk]
 comments: true
 ---
 
-LearnApklis es una aplicación para ir aprendiendo sobre el api de verificación de compra y actualización de aplicaciones en apklis | LearnApklis is an application to learn about the purchase verification api and application update in apklis
+LearnApklis es una aplicación para ir aprendiendo sobre el api de verificación de compra y actualización de aplicaciones en apklis 
+
+LearnApklis is an application to learn about the purchase verification api and application update in apklis
 
 
 https://github.com/cz9dev/learnApklis
