@@ -4,4 +4,4 @@ Freelance Web Designer, backend & frontend Developer. Native Android App Develop
 Highly experienced in designing & developing custom Wordpress and Drupal websites.
 
 ## Let's be internet BFFs
-![https://github.com/cz9dev](D:\Developer\git\cz9dev.github.io\img\github.svg)
+![https://github.com/cz9dev](img\github.svg)
