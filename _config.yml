@@ -15,10 +15,10 @@ author: CZ9Dev
 
 navbar-links:
   Home: "index"
+  Portfolio: "portfolio"
   About Me: "aboutme"
   Resources:
-    - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"    
-  Portfolio: "portfolio"
+    - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"      
 
 # --- Logo --- #
 

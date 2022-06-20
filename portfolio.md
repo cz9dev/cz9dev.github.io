@@ -4,4 +4,4 @@ title: Portfolio
 subtitle: some details about my works
 ---
 
-Algunos de mis trabajos
+Some of my development work
