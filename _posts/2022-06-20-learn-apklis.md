@@ -2,9 +2,9 @@
 layout: post
 title: Learn Apklis
 subtitle: Kotlin code for apk purchase validation example in Apklis store with api created by the community
-cover-img: /assets/img/learn-apklis/banne3.jpg
-thumbnail-img: /assets/img/learn-apklis/banne3.jpg
-share-img: /assets/img/learn-apklis/banne3.jpg
+cover-img: /assets/img/learn-apklis/baner3.jpg
+thumbnail-img: /assets/img/learn-apklis/baner3.jpg
+share-img: /assets/img/learn-apklis/baner3.jpg
 gh-repo: cz9dev/learnApklis
 gh-badge: [star, fork, follow]
 tags: [test, app, apk]
