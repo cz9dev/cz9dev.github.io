@@ -738,10 +738,10 @@ Moving /tmp/zmsetup.20200718-195904.log to /opt/zimbra/log
 Configuration complete - press return to exit
 ~~~
 
-Ya culminamos nuestra instalación. Ya podemos agregar nustros usuarios y empezar a utilizar nuestro servidor de correo, podemos agrear usuarios de un LDAP o AD existente y sincronizar con los mismos, pero eso sera visto en otra entrada del blog.
+Ya culminamos nuestra instalación. Ya podemos agregar nustros usuarios y empezar a utilizar nuestro servidor de correo, podemos agregar usuarios de un LDAP o AD existente y sincronizar con los mismos, pero eso sera visto en otra entrada del blog.
 
-Esta entrada de blog tiene como fuente rincipal el blog de [jorge de la cruz](jorgedelacruz.es) y el de [sisadmmindecuba](https://www.sysadminsdecuba.com/), así que les recomiendo leer el articulo que les comparto con el enlace siguiente
+Esta entrada de blog tiene como fuente rincipal el blog de [jorge de la cruz](jorgedelacruz.es "jorgedelacruz") y el de [sisadmmindecuba](https://www.sysadminsdecuba.com/ "sisadmindecuba"), así que les recomiendo leer el articulo que les comparto con el enlace siguiente
 
 ## ¿Qué hacer una vez instalado?
 
-https://www.jorgedelacruz.es/2015/01/13/zimbra-una-vez-instalado-que-hago-administrador/
+[https://www.jorgedelacruz.es/2015/01/13/zimbra-una-vez-instalado-que-hago-administrador/]()
