@@ -2,9 +2,8 @@
 layout: post
 title: Instalar zimbra 9 - zextras en cuba
 subtitle: ¿Como instalar Zimbra9 - Zextras en Cuba utilizando Ubuntu 18.04?
-
+cover-img: /assets/img/zimbra_path.png
 thumbnail-img: /assets/img/zimbra_thumb.png
-share-img: /assets/img/zimbra_path.png
 tags: [ubuntu, zimbra, zextras, tutorial]
 comments: true
 ---
@@ -13,14 +12,14 @@ Hola, les traigo en esta entrada como instalar el zimbra9 de zextras en ubuntu 1
 
 ## Preparar el Sistema operativo para instalar zimbra
 
-Primero que nada cambiamos de usuario para root
+Primero que nada, cambiamos de usuario para root
 ~~~
 ~# sudo su
 root@zimbra-pc:/#
 ~~~
 
 ### Configuración de proxy (Si estubieras detras de uno)
-Si estas detras de un proxy, configurar el sistema para que utilice proxy, de la siguiente forma:
+Si estas detrás de un proxy, configurar el sistema para que utilice proxy, de la siguiente forma:
 ~~~
 cd /etc/apt/apt.conf.d
 nano 00proxy
@@ -34,14 +33,14 @@ Acquire::https::Proxy "http://ip_proxy:3128";
 Acquire::ftp::Proxy "http://ip_proxy:3128";
 ~~~
 
-Salvamos los cambios y ahora editamos otro archivo para poder luego vajar nuestra key para el zimbra
+Salvamos los cambios y ahora editamos otro archivo para poder luego bajar nuestra key para el zimbra
 
 ~~~
 cd /etc/
 nano wgetrc
 ~~~
 
-Localizamos en ese archivo donde dice https_proxy, http_proxy y ftp_proxy y lo hacemos conindir con nuestra configuracion de proxy, esas lineas estan al rededor de la linea 85
+Localizamos en ese archivo donde dice https_proxy, http_proxy y ftp_proxy y lo hacemos coincidir con nuestra configuración de proxy, esas líneas están alrededor de la línea 85
 
 ~~~
 https_proxy = http://ip_proxy:3128/
@@ -49,11 +48,11 @@ http_proxy = http://ip_proxy:3128/
 ftp_proxy = http://ip_proxy:3128/
 ~~~
 
-Hasta aqui la parte de configuracion de proxy.
+Hasta aquí la parte de configuración de proxy.
 
 ### Configuración de red
 
-Si no hubieramos configurado la con el asistente de red o el dhcp nos hubiera entregado una ip, tendriamos que editar el siguiente fichero.
+Si no hubiéramos configurado la con el asistente de red o el dhcp nos hubiera entregado una ip, tendríamos que editar el siguiente fichero.
 
 ~~~
 vi /etc/netplan/50-cloud-init.yaml
@@ -79,13 +78,13 @@ network:
 
 Donde pone **addresses** habrá que cambiarlo por la IP que queramos poner y el gateway la dirección del router que tengamos en esa red, y de DNS Server deberemos poner o el propio servidor de Zimbra si vamos a usarlo de DNS, o un DNS externo.
 
-Una ves que tengamos esto configurado, hacemos un apply de la configuración.
+Una vez que tengamos esto configurado, hacemos un apply de la configuración.
 
 ~~~
 sudo netplan apply
 ~~~
 
-Si quisieramos comprobar nuestra configuración (hacer un debug) hariamos lo siguiente:
+Si quisiéramos comprobar nuestra configuración (hacer un debug) haríamos lo siguiente:
 
 ~~~
 sudo netplan --debug apply
@@ -120,7 +119,7 @@ DEBUG:netplan triggering .link rules for lo
 DEBUG:netplan triggering .link rules for ens192
 ~~~
 
-Debemos verificar que la configuracion de nuetro fuchero /etc/resolv.conf este bien configurado
+Debemos verificar que la configuración de nuestro fichero /etc/resolv.conf este bien configurado
 
 ~~~
 nano /etc/resolv.conf
@@ -133,7 +132,7 @@ nameserver 127.0.0.1
 nameserver 8.8.8.8
 ~~~
 
-Tambien deberiamos verificar que nuestro archivo hosts esté correctamente configurado:
+También deberíamos verificar que nuestro archivo hosts esté correctamente configurado:
 
 ~~~
 nano /etc/hosts
@@ -151,7 +150,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ~~~
 
-Contodo esto estamos listos para reiniciar el equipo y continuar con el siguiente paso, para reiniciar el equipo hacemos lo siguiente:
+Con esto estamos listos para reiniciar el equipo y continuar con el siguiente paso, para reiniciar el equipo hacemos lo siguiente:
 
 ~~~
 reboot
@@ -159,7 +158,7 @@ reboot
 
 ### Instalación del servidor DNS
 
-Instalaremos el servidor DNS dnsmasq, ideal para pequeños entornos. Es muy posible que tengamos instalado el systemd-resolved en nuestra pc Ubuntu 18.04, primero que nada lo desintalaremos para que no entre en conflicto con el dnsmasq
+Instalaremos el servidor DNS dnsmasq, ideal para pequeños entornos. Es muy posible que tengamos instalado el systemd-resolved en nuestra pc Ubuntu 18.04, primero que nada lo desinstalaremos para que no entre en conflicto con el dnsmasq
 
 ~~~
 sudo systemctl disable systemd-resolved
@@ -176,7 +175,7 @@ Para instalar el dnsmasq seguimos los pasos siguientes
 apt-get install dnsmasq
 ~~~
 
-Una ves instalado el dnsmasq editamos la configuracion para agregarle las entradas necesarias, al final del archivo agregamos:
+Una vez instalado el dnsmasq editamos la configuración para agregarle las entradas necesarias, al final del archivo agregamos:
 
 ~~~
 nano /etc/dnsmasq.conf
@@ -198,7 +197,7 @@ service dnsmasq restart
 ...done.
 ~~~
 
-Antes de instalar zimbra es necesario comprobar que el MX resulva bien y que la entrada DNS de tipo A tambíen resulva, para esto utilizaremos la herramienta dig:
+Antes de instalar zimbra es necesario comprobar que el MX resuelva bien y que la entrada DNS de tipo A también resuelva, para esto utilizaremos la herramienta dig:
 
 ~~~
 dig mx midominio.cu
@@ -253,17 +252,17 @@ correo.midominio.cu.  3600    IN      A       192.168.1.5
 ;; MSG SIZE  rcvd: 65<code></code>
 ~~~
 
-con el test que realizamos podemos observar que la consulta devolvio un answer/respuesta y que el servidor ue respondio fue el local/127.0.0.1, si no optienes estos resultamos debes revizar la configuración de dnsmasq
+Con el test que realizamos podemos observar que la consulta devolvió un answer/respuesta y que el servidor que respondió fue el local/127.0.0.1, si no obtienes estos resultamos debes revisar la configuración de dnsmasq
 
-## Instalacion de Zimbra 9 para Ubuntu 18.04 LTS – Zextras Build
+## Instalación de Zimbra 9 para Ubuntu 18.04 LTS – Zextras Build
 
-Ya estamos en condiciones de instalar el zimbra, pero antes que nada desintalaremos el postfix que es muy probable que este instalado por defecto.
+Ya estamos en condiciones de instalar el zimbra, pero antes que nada desinstalaremos el postfix que es muy probable que este instalado por defecto.
 
 ~~~
 apt-get unistall postfix
 ~~~
 
-Para nuestra instalación utilizaremos un mirror del repositorio de zimbra en Cuba, pero puede ser valido para el repositorio oficial u otro mirror. Vale aclarar que la instalacion desde un mirror será mucho mas lenta que desde el repo oficial.
+Para nuestra instalación utilizaremos un mirror del repositorio de zimbra en Cuba, pero puede ser válido para el repositorio oficial u otro mirror. Vale aclarar que la instalación desde un mirror será mucho más lenta que desde el repo oficial.
 
 ### Configurar repositorio de zimbra
 Cree el archivo /etc/apt/sources.list.d/zimbra.list con el contenido a continuación.
@@ -281,7 +280,7 @@ Instale la llave con:
 sudo apt-key add zimbra-archive-keyring.gpg
 ~~~
 
-En muchos casos esta parte falla por que nuestro Ubuntu no tiene instalado el gnupg o gnupg2, para instalarlo seguimos estos pasos, y repetimos el paso anterior:
+En muchos casos esta parte falla porque nuestro Ubuntu no tiene instalado el gnupg o gnupg2, para instalarlo seguimos estos pasos, y repetimos el paso anterior:
 
 ~~~
 apt-get install gnupg2
@@ -289,7 +288,7 @@ apt-get install gnupg2
 
 Ejecute el siguiente comando para actualizar los índices de paquetes: sudo apt-get update
 
-Una ves echo esto estamos en condicion de comenzamos con zimbra zextras build. Descargargamos el zimbra 9 - zextras desde en enlace oficial en /tmp/zcs y lo descomprimimo.
+Una vez echo esto estamos en condición de comenzamos con zimbra zextras build. Descargáramos el zimbra 9 - zextras desde en enlace oficial en /tmp/zcs y lo descomprimimos.
 
 ~~~
 mkdir /tmp/zcs
@@ -357,7 +356,7 @@ En este punto seleccionaremos "y" si aceptamos la EULA que nos indica el enlace,
 Use Zimbra's package repository [Y]
 ~~~
 
-Esta parte es muy importante, instalaremos solo los paquetes que nos interece, ademas lo aremos desde el repo mirror que configuramos. si escojemos "y" utilizaremos los paquetes del repositorio oficial por lo que escojeremos "n" para utilizar los paquetes del repo mirror que configuramos.
+Esta parte es muy importante, instalaremos solo los paquetes que nos interese, además lo aremos desde el repo mirror que configuramos. si escogemos "y" utilizaremos los paquetes del repositorio oficial por lo que escogeremos "n" para utilizar los paquetes del repo mirror que configuramos.
 
 ~~~
 Use Zimbra's package repository [Y] n
@@ -423,7 +422,7 @@ Installing:
 The system will be modified.  Continue? [N] y
 ~~~
 
-Precionamos "y" para modificar el sistema:
+Presionamos "y" para modificar el sistema:
 
 ~~~
 Beginning Installation - see /tmp/install.log.hONgsH8e for details...
@@ -545,7 +544,7 @@ Installing LDAP configuration database...done.
 Setting defaults...
 ~~~
 
-Ahora tendremos que cambiar el dominio por defecto, es donde mas se suele fallar:
+Ahora tendremos que cambiar el dominio por defecto, es donde más se suele fallar:
 
 ~~~
 DNS ERROR resolving MX for correo.midominio.cu
@@ -560,7 +559,7 @@ Create domain: [correo.midominio.cu] midominio.cu
 done.
 ~~~
 
-Cambiamos la contraseña de admin. Para hacerlo entramos al menú 6 del principal y luego al submenu 4:
+Cambiamos la contraseña de admin. Para hacerlo entramos al menú 6 del principal y luego al submenú 4:
 
 ~~~
 Select, or 'r' for previous menu [r] 4
@@ -601,7 +600,7 @@ Store configuration
 Select, or 'r' for previous menu [r]
 ~~~
 
-Pulsamos ** enter ** para regrezar al menú principal:
+Pulsamos ** enter ** para regresar al menú principal:
 
 ~~~
 Select, or 'r' for previous menu [r] 
@@ -625,26 +624,26 @@ Main menu
 Select from menu, or press 'a' to apply config (? - help) a
 ~~~
 
-Si precionamos a, aplicamos los cambios:
+Si presionamos a, aplicamos los cambios:
 
 ~~~
 Select from menu, or press 'a' to apply config (? - help) a
 ~~~
 
-Precionamos * enter *
+Presionamos * enter *
 
 ~~~
 Save configuration data to a file? [Yes]
 ~~~
 
-Precionamos * enter *
+Presionamos * enter *
 
 ~~~
 Save config in file: [/opt/zimbra/config.10687]
 Saving config in /opt/zimbra/config.10687...done.
 ~~~
 
-Precionamos "y" para continuar
+Presionamos "y" para continuar
 
 ~~~
 Operations logged to /tmp/zmsetup.20200718-195904.log
@@ -738,9 +737,9 @@ Moving /tmp/zmsetup.20200718-195904.log to /opt/zimbra/log
 Configuration complete - press return to exit
 ~~~
 
-Ya culminamos nuestra instalación. Ya podemos agregar nustros usuarios y empezar a utilizar nuestro servidor de correo, podemos agregar usuarios de un LDAP o AD existente y sincronizar con los mismos, pero eso sera visto en otra entrada del blog.
+Ya culminamos nuestra instalación. Ya podemos agregar nuestros usuarios y empezar a utilizar nuestro servidor de correo, podemos agregar usuarios de un LDAP o AD existente y sincronizar con los mismos, pero eso será visto en otra entrada del blog.
 
-Esta entrada de blog tiene como fuente rincipal el blog de [jorge de la cruz](jorgedelacruz.es "jorgedelacruz") y el de [sisadmmindecuba](https://www.sysadminsdecuba.com/ "sisadmindecuba"), así que les recomiendo leer el articulo que les comparto con el enlace siguiente
+Esta entrada de blog tiene como fuente principal el blog de [jorge de la cruz](jorgedelacruz.es "jorgedelacruz") y el de [sisadmmindecuba](https://www.sysadminsdecuba.com/ "sisadmindecuba"), así que les recomiendo leer el artículo que les comparto con el enlace siguiente
 
 ## ¿Qué hacer una vez instalado?
 
