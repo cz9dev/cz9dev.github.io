@@ -41,7 +41,7 @@ round-avatar: true
 social-network-links:
 #  email: "cz9dev@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-#  facebook: cz9dev
+  facebook: cz9dev
   github: cz9dev
 #  twitter: cz9dev
 #  patreon: cz9dev
@@ -184,8 +184,8 @@ footer-hover-col: "#0085A1"
 # instructions. For any support with staticman please direct questions to staticman and 
 # not to BeautifulJekyll.
 #staticman:
-#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  repository : cz9dev/static_comment # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : main # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
 #  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
 #  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
 #    siteKey  : # You need to apply for a site key on Google
@@ -196,16 +196,16 @@ footer-hover-col: "#0085A1"
 # (2) Install the giscus app in your repository (details at https://giscus.app),
 # (3) Fill in *all* the parameters below 
 # See more details about giscus and each of the following parameters at https://giscus.app
-#giscus:
-#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
-#  category: Announcements # Category name of your GitHub Discussion posts
-#  category-id: # ID of your category, retrieve this info from https://giscus.app
-#  mapping: pathname
-#  reactions-enabled: 1
-#  emit-metadata: 0
-#  theme: light
+giscus:
+  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+  repository: cz9dev/cz9dev.github.io # GitHub username/repository eg. "daattali/beautiful-jekyll"
+  repository-id: R_kgDOHPuQ0w # ID of your repository, retrieve this info from https://giscus.app
+  category: Announcements # Category name of your GitHub Discussion posts
+  category-id: DIC_kwDOHPuQ084CP_M4 # ID of your category, retrieve this info from https://giscus.app
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
 
 # --- Misc --- #
 
@@ -221,7 +221,8 @@ date_format: "%B %-d, %Y"
 timezone: "America/Havana"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+#permalink: /:year-:month-:day-:title/
+permalink: /:day-:month-:year-:title/
 paginate: 5
 
 kramdown:
