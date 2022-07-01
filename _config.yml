@@ -159,7 +159,7 @@ footer-hover-col: "#0085A1"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
+disqus: "cz9dev"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -183,11 +183,11 @@ footer-hover-col: "#0085A1"
 # https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
 # instructions. For any support with staticman please direct questions to staticman and 
 # not to BeautifulJekyll.
-staticman:
-  repository : cz9dev/static_comment # GitHub username/repository eg. "daattali/beautiful-jekyll"
-  branch     : main # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-  endpoint   : https://api.staticman.net/v3/entry/github/cz9dev/cz9dev.github.io/main/properties # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
-  reCaptcha: staticman.yml  # (optional, set these parameters in `staticman.yml` as well) 
+#staticman:
+#  repository : cz9dev/static_comment # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : main # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : https://api.staticman.net/v3/entry/github/cz9dev/cz9dev.github.io/main/properties # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
+  #reCaptcha: staticman.yml  # (optional, set these parameters in `staticman.yml` as well) 
 #    siteKey  : # You need to apply for a site key on Google
 #    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
 
