@@ -207,11 +207,6 @@ giscus:
   emit-metadata: 0
   theme: light
   
-  input-position: bottom  
-  lang: es
-  loading: lazy
-  crossorigin: anonymous
-  
 
 # --- Misc --- #
 
