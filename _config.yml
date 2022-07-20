@@ -43,7 +43,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: cz9dev
   github: cz9dev
-#  twitter: cz9dev
+  twitter: cz9dev
 #  patreon: cz9dev
 #  youtube: cz9dev
 #  medium: yourname
