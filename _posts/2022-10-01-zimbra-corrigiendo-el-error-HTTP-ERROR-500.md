@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zimbra: corrigiendo el error "HTTP ERROR 500 java.lang.NoClassDefFoundError: no se pudo inicializar la clase com.zimbra.soap.JaxbUtil" después de la actualización
-subtitle: Forma de forregir el error enunciado en el titulo de la entrada
+title: Zimbra: corrigiendo el error "HTTP ERROR 500 java.lang.NoClassDefFoundError:"
+subtitle: como corregir del error "HTTP ERROR 500 java.lang.NoClassDefFoundError: no se pudo inicializar la clase com.zimbra.soap.JaxbUtil" que se puede mostrar al acceder a Zimbra después de actualizar a Zimbra 9
 cover-img: /assets/img/zimbra_path.png
 thumbnail-img: /assets/img/zimbra_thumb.png
 tags: [ubuntu, zimbra, zextras, tutorial]
