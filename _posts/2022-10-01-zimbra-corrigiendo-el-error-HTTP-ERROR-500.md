@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Zimbra: corrigiendo el error HTTP ERROR 500 java.lang.NoClassDefFoundError:
-subtitle: como corregir del error HTTP ERROR 500 java.lang.NoClassDefFoundError: no se pudo inicializar la clase com.zimbra.soap.JaxbUtil que se puede mostrar al acceder a Zimbra después de actualizar a Zimbra 9
+title: Como corregir el error HTTP ERROR 500 java.lang.NoClassDefFoundError
+subtitle: Solucion para el error HTTP ERROR 500 luego de actualizar Zimbra
 cover-img: /assets/img/zimbra_path.png
 thumbnail-img: /assets/img/zimbra_thumb.png
 tags: [ubuntu, zimbra, zextras, tutorial]
 comments: true
 ---
 
-¡Hola! en esta entrada, me gustaría compartir como corregir del error ***"HTTP ERROR 500 java.lang.NoClassDefFoundError: no se pudo inicializar la clase com.zimbra.soap.JaxbUtil"*** que se puede mostrar al acceder a Zimbra después de actualizar a Zimbra 9 bluid Zextras Release 9.0.0.ZEXTRAS.20220713.UBUNTU18.64 UBUNTU18_64 FOSS edition o después de aplicar un parche a la versión 8.8.15 (Network Edition y Open Source).
+En esta entrada, me gustaría compartir como corregir del error ***"HTTP ERROR 500 java.lang.NoClassDefFoundError: no se pudo inicializar la clase com.zimbra.soap.JaxbUtil"*** que se puede mostrar al acceder a Zimbra después de actualizar a Zimbra 9 bluid Zextras Release 9.0.0.ZEXTRAS.20220713.UBUNTU18.64 UBUNTU18_64 FOSS edition o después de aplicar un parche a la versión 8.8.15 (Network Edition y Open Source).
 
 La solución para este error, que se debe a que el script de actualización no puede actualizar el parámetro "mailboxd_java_options" de zmlocalconfig, es agregar las siguientes opciones:
 
