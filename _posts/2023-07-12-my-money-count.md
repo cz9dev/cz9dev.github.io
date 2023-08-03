@@ -17,7 +17,7 @@ Esta apk nos ayuda a contar fácilmente el dinero, solo es necesario entrar en l
 
 # Download | Descargar
 ## In english
-[![](https://archive.apklis.cu/application/icon/cu.tiaris.mymoneycount-v12.png_140)](https://www.apklis.cu/application/cu.tiaris.mymoneycount) Download My Money Count from [Apklis](https://www.apklis.cu/application/cu.tiaris.mymoneycount)
+[![](https://archive.apklis.cu/application/icon/cu.tiaris.mymoneycount-v140.png_140)](https://www.apklis.cu/application/cu.tiaris.mymoneycount) Download My Money Count from [Apklis](https://www.apklis.cu/application/cu.tiaris.mymoneycount)
 
 ## En español
-[![](https://archive.apklis.cu/application/icon/cu.tiaris.mymoneycount-v12.png_140)](https://www.apklis.cu/application/cu.tiaris.mymoneycount) Descargar My Money Count desde [Apklis](https://www.apklis.cu/application/cu.tiaris.mymoneycount)
+[![](https://archive.apklis.cu/application/icon/cu.tiaris.mymoneycount-v140.png_140)](https://www.apklis.cu/application/cu.tiaris.mymoneycount) Descargar My Money Count desde [Apklis](https://www.apklis.cu/application/cu.tiaris.mymoneycount)
