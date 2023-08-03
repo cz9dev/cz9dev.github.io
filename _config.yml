@@ -14,8 +14,7 @@ author: CZ9Dev
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Home: "/"
-  Portfolio: "portfolio"
+  Home: "/"  
   About Me: "aboutme"
   Resources:
     - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"      
