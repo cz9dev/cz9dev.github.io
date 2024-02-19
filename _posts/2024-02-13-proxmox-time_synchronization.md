@@ -3,8 +3,8 @@ layout: post
 title: Sincronizar hora de Proxmox contra Servidor NTP local
 subtitle:  Como sincronizar nuestro servidor proxmox contra un servidor ntp local
 cover-img: /assets/img/posts/proxmox.png
-thumbnail-img: /assets/img//posts/proxmox.png
-tags: [proxmox]
+thumbnail-img: /assets/img/posts/proxmox.png
+tags: [Proxmox]
 comments: true
 ---
 
