@@ -4,6 +4,7 @@ title: Importar maquina virtual VirtualBox o VMWare a Proxmox
 subtitle:  Procedimiento para importar una maquina virtual de VirtualBox o VMWare a Proxmox
 tags: [VirtualBox, VMWare, Proxmox]
 comments: true
+youtubeId: mUrRezk23DQ
 ---
 
 # Importar maquina virtual de VirtualBox o VMWare a Proxmox
@@ -46,3 +47,7 @@ Dependiendo de su necesidad. Debe exportar la maquina virtual a ```.ova``` en es
 verificar si todo funciona correctamente, si todo funciono correctamente su VM debe encender correctamente
 
 ![Iniciar VM en Proxmox](/assets/img/importar-vm-proxmox/probarvmimportada.png "VM Importada iniciando")
+
+¡O si lo prefiere puede ver en youtube los pasos!
+
+{% include youtubePlayer.html id=page.youtubeId %}
