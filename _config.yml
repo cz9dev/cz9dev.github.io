@@ -17,7 +17,8 @@ navbar-links:
   Home: "/"  
   About Me: "aboutme"
   Resources:
-    - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"      
+    - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"
+    - lib aboutapps: "https://cz9dev.github.io/aboutapps"
 
 # --- Logo --- #
 
@@ -44,7 +45,7 @@ social-network-links:
   github: cz9dev
   twitter: cz9dev
 #  patreon: cz9dev
-#  youtube: cz9dev
+  youtube: cz9dev
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
