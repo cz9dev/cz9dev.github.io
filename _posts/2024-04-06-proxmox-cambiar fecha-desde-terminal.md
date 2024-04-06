@@ -2,7 +2,7 @@
 layout: post
 title: Cambiar la fecha de servidor Proxmox desde la terminal comandos utiles
 subtitle:  Como podemos cambiar la fecha de proxmox desde la terminal
-cover-img: /assets/img/posts/proxmox.png
+## cover-img: /assets/img/posts/proxmox.png
 thumbnail-img: /assets/img/posts/proxmox.png
 tags: [Proxmox]
 comments: true
