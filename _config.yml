@@ -19,6 +19,7 @@ navbar-links:
   Resources:
     - lib apklistpaidchequed: "https://cz9dev.github.io/apklispaidchequed/"
     - lib aboutapps: "https://cz9dev.github.io/AboutApps"
+  Contact Us: "form"
 
 # --- Logo --- #
 
