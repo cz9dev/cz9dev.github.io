@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Configurar wordpress detras de un servidor Proxy
-subtitle:  Como configurar wordpress para que actualice o instale nuevos plugin detras de un proxy
+subtitle: Como configurar wordpress para que actualice o instale nuevos plugin detrás de un proxy
 ##cover-img: /assets/img/posts/ssl.jpg
 ##thumbnail-img: /assets/img/posts/ssl.jpg
 tags: [wordpress, proxy, php]
 comments: true
 ---
-En ocaciones tenemos nuestra instalación de wordpress detras de un servidor proxy, ejemplo de estos los sitios de intranet corporativas, entre otros. para esto es necesario decirle a nuestro wordpress que para instalar plugin o templay, debe pasar por un proxy, la forma para hacerlo es la siguiente:
+En ocasiones tenemos nuestra instalación de wordpress detrás de un servidor proxy, ejemplo de estos los sitios de intranet corporativas, entre otros. para esto es necesario decirle a nuestro wordpress que para instalar plugin o tema, debe pasar por un proxy, la forma para hacerlo es la siguiente:
 
 1- Editamos el archivo wp-config.php que esta en la raíz de nuestro sitio.
 ``` sh
