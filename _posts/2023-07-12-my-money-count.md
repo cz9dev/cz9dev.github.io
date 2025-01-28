@@ -26,10 +26,14 @@ Esta apk nos ayuda a contar fácilmente el dinero, solo es necesario entrar en l
 ## In english
 In case you are unable to create the ticket to activate the pro version of this app, download and install [RequestLicence](https://mega.nz/file/HdBhjZzK#DrBIz0LSDyFoBuKE92-cH_znmpKGxX2fyfDgr3RWw7A), follow the instructions to generate the key, copy the key and send it along with the transaction number and phone number of your device to: qyvl8oh9l@mozmail.com, or use the Send Email button in the RequestLicence app.
 
+!["Pasos a seguir"](/assets/img/mymoneycount/RequestLicence_v1.0.png "Pasos a seguir")
+
 Remember that from the About section in the MyMoneyCount app you can communicate through official channels with the development group
 
 ## En español
 En caso de que no pueda crear el ticket para activar la versión pro de esta aplicación, descargue e instale [RequestLicence](https://mega.nz/file/HdBhjZzK#DrBIz0LSDyFoBuKE92-cH_znmpKGxX2fyfDgr3RWw7A) siga las instrucciones para generar el key, copie el key y envielo junto al numero de transaccion y telefono de su dispositivo a: qyvl8oh9l@mozmail.com, o utilice el propio boton de Enviar Correo que posee la app RequestLicence.
+
+!["Pasos a seguir"](/assets/img/mymoneycount/RequestLicence_v1.0.png "Pasos a seguir")
 
 Recuerda que desde el apartado Acerca de en la app MyMoneyCount usted puede comunicarce por los canales oficiales con el grupo de desarrollo
 
