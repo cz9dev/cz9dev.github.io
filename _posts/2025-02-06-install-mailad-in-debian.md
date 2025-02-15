@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inslatar MailAD en Debian
+title: Instalar MailAD en Debian
 subtitle: ¿Como instalar MailAD en debian y no morir en el intento?
 tags: [MailAD, Proxmox, Debian]
 comments: true
