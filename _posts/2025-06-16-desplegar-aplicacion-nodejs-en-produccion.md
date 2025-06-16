@@ -2,7 +2,7 @@
 layout: post
 title: Guía Completa para Desplegar tu Aplicación Node.js en Producción (Auto-hospedado)
 subtitle: Como desplegar tu Aplicación Node.js en Producción (Auto-hospedado)
-cover-img: /assets/img/posts/self-hoste-nodejs.png
+##cover-img: /assets/img/posts/self-hoste-nodejs.png
 thumbnail-img: /assets/img/posts/self-hoste-nodejs.png
 tags: [Node.js]
 comments: true
