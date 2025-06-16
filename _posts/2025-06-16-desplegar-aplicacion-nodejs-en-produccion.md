@@ -11,11 +11,14 @@ comments: true
 Para poner tu aplicación Node.js en producción de forma auto-hospedada, sigue estos pasos detallados:
 
 # Preparación del Entorno de Producción
+
 ## Requisitos básicos:
 * Servidor físico/VPS: Puedes usar un servidor dedicado, VPS (como DigitalOcean, Linode, OVH) o incluso una máquina local
 * Sistema Operativo: Ubuntu Server LTS (recomendado) o CentOS
 * Conexión SSH: Para administración remota
+
 ## Configuración Inicial del Servidor
+
 ```bash
 # Actualizar sistema
 sudo apt update && sudo apt upgrade -y
@@ -29,8 +32,11 @@ source ~/.bashrc
 nvm install --lts
 nvm use --lts
 ```
+
 ## Instalar y Configurar Base de Datos
+
 Para MongoDB (si es tu base de datos):
+
 ```bash
 sudo apt install -y mongodb
 sudo systemctl enable mongodb
@@ -38,6 +44,7 @@ sudo systemctl start mongodb
 ```
 
 ## Crear usuario admin (ejecutar en mongo shell)
+
 ```bash
 mongo
 > use admin
@@ -46,7 +53,9 @@ mongo
 ```
 
 ## Desplegar tu Aplicación
+
 Opción A: Clonar repositorio Git
+
 ```bash
 # Clonar tu repositorio
 git clone https://github.com/tu-usuario/tu-repo.git
@@ -63,7 +72,9 @@ nano .env  # Editar con tus valores reales
 Opción B: Subir archivos manualmente
 
 Usa SFTP/SCP (como FileZilla) para subir tus archivos al servidor.
+
 ## Configurar Reverse Proxy con Nginx
+
 ```bash
 
 # Instalar Nginx
@@ -95,15 +106,20 @@ server {
         expires 30d;
     }
 }
+
 ```
+
 Activar la configuración:
+
 ```bash
 
 sudo ln -s /etc/nginx/sites-available/tu-app /etc/nginx/sites-enabled
 sudo nginx -t  # Verificar sintaxis
 sudo systemctl restart nginx
 ```
+
 ## Gestionar Procesos con PM2
+
 ```bash
 
 # Instalar PM2 globalmente
@@ -118,6 +134,7 @@ pm2 save
 ```
 
 ## Configurar Firewall (UFW)
+
 ```bash
 
 sudo ufw allow ssh
@@ -137,16 +154,19 @@ sudo certbot --nginx -d tudominio.com -d www.tudominio.com
 ```
 
 ## Monitoreo y Mantenimiento
+
 Monitoreo básico:
+
 ```bash
 
 pm2 monit  # Monitor en tiempo real
 pm2 logs   # Ver logs
 ```
 
-Actualizaciones automáticas (opcional):
+### Actualizaciones automáticas (opcional):
 
 Crear un script /usr/local/bin/update-app:
+
 ```bash
 
 #!/bin/bash
@@ -163,16 +183,18 @@ bash
 sudo chmod +x /usr/local/bin/update-app
 ```
 
-10. Copias de Seguridad
+## Copias de Seguridad
 Backup básico de base de datos (cron job):
 bash
 
-# Crear script de backup
+### Crear script de backup
+
 ```bash
 sudo nano /usr/local/bin/backup-db
 ```
 
 Contenido del script:
+
 ```bash
 
 #!/bin/bash
@@ -182,6 +204,7 @@ find /backups/ -type f -mtime +7 -delete
 ```
 
 Programar en cron (crontab -e):
+
 ```text
 
 0 3 * * * /usr/local/bin/backup-db
