@@ -2,8 +2,8 @@
 layout: post
 title: Configuración de red empresarial con pfSense
 subtitle: Configurar una red empresarial con pfSense (v2.7.2), Windows Server 2019 (como DC), un switch capa 3 y segmentación en WAN, LAN y DMZ
-##cover-img: /assets/img/posts/self-hoste-nodejs.png
-##thumbnail-img: /assets/img/posts/self-hoste-nodejs.png
+cover-img: /assets/img/posts/path_red_empresarial.jpg
+thumbnail-img: /assets/img/posts/thumb_red_empresarial.png
 tags: [DMZ, pfSense, Server 2019]
 comments: true
 ---
